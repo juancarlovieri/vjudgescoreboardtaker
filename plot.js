@@ -18,12 +18,6 @@ function cmp(a, b){
   }
   return comparison;
 }
- 
-// data = [
-//     ['0A', '0B', '0C'],
-//     ['1A', '1B', '1C'],
-//     ['2A', '2B', '2C']
-// ];
 
 data = [];
 
@@ -41,7 +35,6 @@ for(var i = 0; i < dir.length; ++i){
 }
 
 var head = ['Names'];
-// console.log(names);
 for(var i = 0; i < dir.length; ++i){
   head[head.length] = dir[i].substr(2, dir[i].length - 3);
 }
@@ -103,5 +96,4 @@ async function build(cl){
       console.log('%d cells updated.', result.data.updatedCells);
     }
   });
-  // gsapi.spreadsheets.values.update(opt);
 }
