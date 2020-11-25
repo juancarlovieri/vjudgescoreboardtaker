@@ -8,15 +8,15 @@ let data,
 
 
 function cmp(a, b){
-  console.log(a[1]);
-  if(a[0] == "Names"){console.log("TES");return -1;}
-  let comparison = 0;
-  if (a[1] < b[1]) {
-    comparison = 1;
-  } else {
-    comparison = -1;
+  // console.log(a[1]);
+  if(a[0] == "Names"){return -1;}
+  if(a.length < b.length)console.error('column not of the same size');
+  for(var i = 1; i < a.length; ++i){
+    if(a[i] < b[i]){
+      return 1;
+    } else if(a[i] > b[i])return -1;
   }
-  return comparison;
+  return 1;
 }
 
 data = [];
